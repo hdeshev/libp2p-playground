@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "deshev.com/libp2p-time-service/proto";
+
+import "google/protobuf/timestamp.proto";
+
+message TimeRequest {
+    string greeting = 1;
+}
+
+message TimeResponse {
+    google.protobuf.Timestamp server_time = 1;
+}
